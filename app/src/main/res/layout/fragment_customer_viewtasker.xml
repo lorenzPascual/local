@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:id="@+id/taskerbanner">
+
+                </View>
+
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_below="@+id/hr"
+                    android:layout_marginTop="-70dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="17dp"
+                    android:elevation="10dp"
+                    android:background="@drawable/round_style"
+                    android:src="@drawable/avatar"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:id="@+id/hr"
+                    android:layout_below="@+id/taskerbanner"
+                    android:background="@color/gray"/>
+                <TextView
+                    android:id="@+id/tasker_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wally Kuhic"
+                    android:textSize="18sp"
+                    android:textFontWeight="6"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginBottom="30dp"
+                    android:layout_below="@id/hr"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="15dp"
+                    android:textAlignment="center"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:background="@color/gray"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/service_name"
+                    android:text="Featured Skills"
+                    android:textSize="18sp"
+                    android:textFontWeight="6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nail Care"
+                    android:layout_marginLeft="30dp"
+                    android:paddingVertical="5dp"
+                    android:textSize="12sp"
+                    android:paddingHorizontal="10dp"
+                    android:layout_below="@+id/service_name"
+                    android:background="@drawable/skill_badge_style"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:background="@color/gray"
+                    android:layout_alignParentTop="true"/>
+                <TextView
+                    android:id="@+id/intro"
+                    android:text="Introduction"
+                    android:textSize="18sp"
+                    android:textFontWeight="6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Integer gravida tempor dui, vitae fringilla libero efficitur sed. Cras iaculis interdum fringilla. Vestibulum blandit nisi vel lectus consectetur, ac efficitur lectus varius. Quisque ut ultricies"
+                    android:layout_marginHorizontal="12dp"
+                    android:paddingVertical="5dp"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="10dp"
+                    android:layout_below="@+id/intro"
+                    />
+
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

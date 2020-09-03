@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="15dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingBottom="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/imgService"
+                android:layout_width="50dp"
+                android:layout_margin="5dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logo"
+                />
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/customername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text= "TEST NAME"
+                    android:textSize="14dp"
+                    android:textFontWeight="6"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nail Care"
+                    android:layout_marginLeft="30dp"
+                    android:paddingVertical="5dp"
+                    android:textSize="12sp"
+                    android:paddingHorizontal="10dp"
+                    android:layout_below="@+id/service_name"
+                    android:background="@drawable/skill_badge_style"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigationtasker"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.juan_ted_ui.customer.servicetypes.ServiceTypesFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_customer_services">
+        <action
+            android:id="@+id/navigate_to_services"
+            app:destination="@id/navigation_services" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_requests"
+        android:name="com.example.juan_ted_ui.tasker.requests.RequestListFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_tasker_requests_request_list">
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_services"
+        android:name="com.example.juan_ted_ui.customer.services.ServicesFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_customer_services">
+        <argument
+        android:name="Id"
+        app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_mytasker"
+        android:name="com.example.juan_ted_ui.customer.mytasker.MyTaskerFragment"
+        android:label="@string/title_mytaskers"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_messages"
+        android:name="com.example.juan_ted_ui.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.juan_ted_ui.customer.profile.IndexFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_customer_profile_index">
+        <action
+            android:id="@+id/navigate_profile_to_geolocation"
+            app:destination="@id/navigation_geolocation" >
+        </action>
+        <action
+            android:id="@+id/navigate_profile_to_updateprofile"
+            app:destination="@id/navigation_updateprofile" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_geolocation"
+        android:name="com.example.juan_ted_ui.customer.profile.UpdateGeolocation"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_customer_profile_updategeolocation" >
+        <argument
+            android:name="ID"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_updateprofile"
+        android:name="com.example.juan_ted_ui.customer.profile.UpdateProfileFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_customer_profile_updategeolocation" >
+        <argument
+            android:name="ID"
+            app:argType="long" />
+    </fragment>
+</navigation>
